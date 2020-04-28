@@ -1,23 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
-<head>
-    <meta charset="UTF-8"> {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
+{% block title %} Home Page {% endblock%}
 
-    <title>Welcome to the newshighlights website</title>
+<!-- Content block -->
 
-    {% endif %}
-</head>
+{% block content %}
 
-<body>
-    {% block navbar %}
-    {% include "navbar.html" %}
-    {% endblock %}
 
-    <h1>Hello news</h1>
+<div class="container">
 
-</body>
+    <!-- ESPN news-->
+    <h1 class="text-center"><u>ESPN News</u></h1>
+    <p>
 
-</html>
+        {{macro.displayNewsList(espn)}}
+    </p>
+
+    <!-- TIME news section-->
+    <h1 class="text-center"><u>TIME News</u></h1>
+    <p>
+
+        {{macro.displayNewsList(time)}}
+    </p>
+
+    <!--CNN news section-->
+    <h1 class="text-center"><u>CNN News</u></h1>
+    <p>
+
+        {{macro.displayNewsList(cnn)}}
+    </p>
+
+    <!-- NBC news section-->
+    <h1 class="text-center"><u>NBC News</u></h1>
+    <p>
+
+        {{macro.displayNewsList(nbc)}}
+    </p>
+
+    <!--ABC news section-->
+
+    <h1 class="text-center"><u>ABC News</u></h1>
+    <p>
+
+        {{macro.displayNewsList(abc)}}
+    </p>
+
+    <!-- FOX news section-->
+    <h1 class="text-center"><u>FOX News</u></h1>
+    <p>
+
+        {{macro.displayNewsList(fox)}}
+    </p>
+
+    <!--The wallstreet journal-->
+    <h1 class="text-center"><u>The wallstreet Journal</u></h1>
+    <p>
+
+        {{macro.displayNewsList(wallstreet)}}
+    </p>
+
+
+</div>
+
+
+
+{% endblock%}
