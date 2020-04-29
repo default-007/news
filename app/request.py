@@ -4,13 +4,14 @@ from .models import news_source
 from .models import articles
 
 News_source = news_source.News_source
+Articles = articles.Articles
 
 # Getting api key
 apiKey = app.config['NEWS_API_KEY']
 
 # Getting the news base url
 base_url = app.config["NEWS_API_BASE_URL"]
-base_urll = app.config["NEWS_API_BASE_URLL"]
+source_url = app.config["NEWS_API_SOURCE_URL"]
 
 def get_news_source(sources):
     """
@@ -60,7 +61,7 @@ def get_articles(category):
     """
     Fuction to get article json from request
     """
-    get_articles_url = base_urll.format(category,apiKey)
+    get_articles_url = source_url.format(category,apiKey)
 
     with urllib.request.urlopen(get_articles_url) as url:
         articles_data = url.read()

@@ -1,25 +1,25 @@
 {% macro displayNewsList(news_source_list) %}
 
-<div class="row">
-  <div class="col-md-3">
-    <div class="container">
-      <div class="text-center">
-        {% for news in news_source_list %}
-        <h1><strong>{{ news.title }}</strong></h1>
+<div class="container">
+  <div class="text-center">
+    <div class="row">
+      {% for news in news_source_list %}
+      <div class="col-md-6">
+        <h2>{{ news.title }}</h2>
         <img src="{{news.urlToImage}}" class="img-responsive" />
         <br />
         <p>
-          <u><strong>{{ news.description}}</strong></u>
+          {{ news.description}}
         </p>
         <p>{{ news.content }}</p>
         <p>
           To view more details <a href="{{ news.url }}"><em>click here</em></a>
         </p>
-        <div class="blochquote-footer">
+        <div>
           <p>Published on :{{ news.publishedAt}}</p>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>

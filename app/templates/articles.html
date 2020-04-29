@@ -4,44 +4,42 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <!--business categories-->
-      <h2><u>USA Articles</u></h2>
+      <h2>Articles</h2>
       {% for usa_article in us %}
-      <h1><strong>{{ usa_article.title }}</strong></h1>
+      <h1>{{ usa_article.title }}</h1>
       <img src="{{usa_article.urlToImage}}" class="img-responsive" />
       <p>
-        <u><strong>{{ usa_article.description }}</strong></u>
+        {{ usa_article.description }}
       </p>
       <p>{{ usa_article.content }}</p>
       <p>
         To view more details
         <a href="{{ usa_article.url }}"><em>click here</em></a>
       </p>
-      <div class="blockquote-footer">
+      <div>
         {{ usa_article.publishedAt }}
       </div>
       {% endfor %}
     </div>
-
+    <!--
     <div class="col-md-6">
-      <!--entertainment categories-->
-      <h2><u>UK Articles</u></h2>
+      <h2>UK Articles</h2>
       {% for uk_article in gb %}
-      <h1><strong>{{ uk_article.title }}</strong></h1>
+      <h1>{{ uk_article.title }}</h1>
       <img src="{{uk_article.urlToImage}}" class="img-responsive" />
       <p>
-        <u><strong>{{ uk_article.description }}</strong></u>
+        {{ uk_article.description }}
       </p>
       <p>{{ uk_article.content }}</p>
       <p>
         To view more details
         <a href="{{ uk_article.url }}"><em>click here</em></a>
       </p>
-      <div class="blockquote-footer">
+      <div>
         {{ uk_article.publishedAt }}
       </div>
       {% endfor %}
-    </div>
+    </div>-->
   </div>
 </div>
 {% endblock %}
