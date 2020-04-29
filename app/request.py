@@ -46,13 +46,14 @@ def process_results(news_source_list):
         id = news_source_item.get('id')
         name = news_source_item.get('name')
         title = news_source_item.get('title')
+        urlToImage = news_source_item.get('urlToImage')
         description = news_source_item.get('description')
         url = news_source_item.get('url')
         publishedAt = news_source_item.get('publishedAt')
         content = news_source_item.get('content')
 
         if content:
-            news_source_object = News_source(id,name,title,description,url,publishedAt,content)
+            news_source_object = News_source(id,name,title,urlToImage,description,url,publishedAt,content)
             news_source_results.append(news_source_object)
 
     return news_source_results
@@ -71,13 +72,14 @@ def get_articles(category):
         if article_response:
             id = article_response.get('id')
             name = article_response.get('name')
+            urlToImage = article_response.get('urlToImage')
             description = article_response.get('description')
             url = article_response.get('url')
             category = article_response.get('category')
             language = article_response.get('language')
 
             if language =='en':
-                articles_object = Articles(id,name,description,url,category,language)
+                articles_object = Articles(id,name,urlToImage,description,url,category,language)
 
 
     return articles_object

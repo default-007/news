@@ -8,26 +8,26 @@ Home Page {% endblock%}
 <div class="container">
   <div class="row">
     <div class="">
-      <!-- ESPN news-->
-      <h1 class="text-center"><u>ESPN News</u></h1>
-      <div class="">
-        {{macro.displayNewsList(espn)}}
-      </div>
-    </div>
-
-    <div class="">
-      <!-- TIME news -->
-      <h1 class="text-center"><u>TIME News</u></h1>
-      <div class="">
-        {{macro.displayNewsList(time)}}
-      </div>
-    </div>
-
-    <div class="">
       <!--CNN news -->
       <h1 class="text-center"><u>CNN News</u></h1>
       <div class="">
         {{macro.displayNewsList(cnn)}}
+      </div>
+    </div>
+
+    <div class="">
+      <!-- FOX news -->
+      <h1 class="text-center"><u>FOX News</u></h1>
+      <div class="">
+        {{macro.displayNewsList(fox)}}
+      </div>
+    </div>
+
+    <div class="">
+      <!-- ESPN news-->
+      <h1 class="text-center"><u>ESPN News</u></h1>
+      <div class="">
+        {{macro.displayNewsList(espn)}}
       </div>
     </div>
   </div>
@@ -49,10 +49,10 @@ Home Page {% endblock%}
     </div>
 
     <div class="">
-      <!-- FOX news -->
-      <h1 class="text-center"><u>FOX News</u></h1>
+      <!-- TIME news -->
+      <h1 class="text-center"><u>TIME News</u></h1>
       <div class="">
-        {{macro.displayNewsList(fox)}}
+        {{macro.displayNewsList(time)}}
       </div>
     </div>
   </div>
