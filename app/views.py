@@ -17,7 +17,7 @@ def index():
     fox_news = get_news_source('fox-news')
     espn_news = get_news_source('espn')
     the_wall_street_journal = get_news_source('the-wall-street-journal')
-    title = 'Home - Welcome to The best News Website Online'
+    title = 'The Best of News'
     return render_template('index.html', title = title, abc = abc_news, cnn = cnn_news, time = time_news , nbc = nbc_news, fox = fox_news, wallstreet = the_wall_street_journal, espn = espn_news)
 
 @app.route('/articles')
