@@ -26,6 +26,5 @@ def articles():
     '''
     View articles page function that returns the articles details page and its data
     '''
-    category_articles = get_articles('business')
-    title = 'Here are articles from various fields'
-    return render_template('articles.html',title = title, business = category_articles )
+    category_articles = get_articles('sport')
+    return render_template('articles.html', business = category_articles )
