@@ -47,6 +47,12 @@ export API_KEY='{Enter your News Api Key}'
 python3.8 manage.py server
 ```
 
+or
+
+```bash
+./start.sh
+```
+
 5. Testing the application
 
 ```bash
