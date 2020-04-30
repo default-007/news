@@ -10,7 +10,13 @@ This is an application that will help people who want to get realtime news witho
 
 ## Live Demo
 
-Click [Link](https://news.herokuapp.com/) to visit the site
+Click [Link](https://news-007.herokuapp.com/) to visit the site
+
+## BDD
+
+| Behavior                               | Input | Output                                                                                        |
+| -------------------------------------- | ----- | --------------------------------------------------------------------------------------------- |
+| Display Various news from news sources | None  | Display the top news articles from various news sources like CNN, FOX NEWS, ESPN, NBC and ABC |
 
 ## Development Installation
 
