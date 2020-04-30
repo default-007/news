@@ -1,0 +1,14 @@
+body {
+  background-color: aqua;
+  font-family: sans-serif;
+}
+.bg-light {
+  background-color: aliceblue;
+}
+h2 {
+  font-weight: bold;
+}
+h1 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
