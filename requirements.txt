@@ -4,7 +4,7 @@ Flask-Bootstrap==3.3.7.1
 Flask-Script==2.0.6
 gunicorn==20.0.4
 Jinja2==2.11.2
-Pillow==7.0.0
+Pillow==9.3.0
 requests==2.22.0
 requests-unixsocket==0.2.0
 SecretStorage==2.3.1
